@@ -4,17 +4,24 @@ import Layout from "./layout";
 
 export default class postLayout extends Component {
   render() {
+    const { markdownRemark } = this.props.data;
     return (
       <Layout>
-        <h1>Post Layout</h1>
+        <h1>{markdownRemark.frontmatter.title}</h1>
+        <sup>{markdownRemark.frontmatter.date}</sup>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: markdownRemark.html,
+          }}
+        />
       </Layout>
     );
   }
 }
 
 export const query = graphql`
-  query PostQuery {
-    markdownRemark(frontmatter: { slug: { eq: "/third-post" } }) {
+  query PostQuery($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title

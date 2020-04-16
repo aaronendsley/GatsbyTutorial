@@ -49,11 +49,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <p>{data.site.siteMetadata.description}</p>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <footer>Super Cool Blog</footer>
       </div>
       <Archive></Archive>
     </>

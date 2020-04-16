@@ -1,9 +1,8 @@
 ---
-
 slug: "/third-post"
 date: "2020-03-03"
 title: "Our Third Post"
----# Hello
+---
 
 ## Starfleet Borg Interaction protocol
 

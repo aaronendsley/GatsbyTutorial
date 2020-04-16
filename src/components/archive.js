@@ -30,7 +30,6 @@ const Archive = () => {
       <aside>
         <h3> Archive </h3>
         <ul>
-          {console.log(data)}
           {data.allMarkdownRemark.edges.map(edge => (
             <li key={edge.node.frontmatter.slug}>
               <Link to={`/posts${edge.node.frontmatter.slug}`}>
