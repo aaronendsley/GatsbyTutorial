@@ -48,8 +48,6 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <p>{data.site.siteMetadata.description}</p>
-        <footer>Super Cool Blog</footer>
       </div>
       <Archive></Archive>
     </>
