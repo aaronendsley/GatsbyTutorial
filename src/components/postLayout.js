@@ -7,13 +7,15 @@ export default class postLayout extends Component {
     const { markdownRemark } = this.props.data;
     return (
       <Layout>
-        <h1>{markdownRemark.frontmatter.title}</h1>
-        <sup>{markdownRemark.frontmatter.date}</sup>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: markdownRemark.html,
-          }}
-        />
+        <>
+          <h1>{markdownRemark.frontmatter.title}</h1>
+          <p>{markdownRemark.frontmatter.date}</p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: markdownRemark.html,
+            }}
+          />
+        </>
       </Layout>
     );
   }
